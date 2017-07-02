@@ -1,1 +1,79 @@
-<p> Successfully connected to server! </p>
+<div class='container'>
+	<div class='row'>
+		<div class='col-xs-12 text-center' id='top-bar'>
+			<h1> Scarlet Social! </h1>
+			</div>
+		<div class="col-xs-6 text-center" class='task'>
+		<div class='row'>
+			{{#each profile_data}}
+			<div class='col-xs-9 text-center'>
+			<pre>{{this.id}}. {{this.fullname}}</pre>
+			
+		</div>
+	<div class='col-xs-3 text-center'>
+		<form method='POST' action='/profile/update?_method=PUT' 
+		class='button-size'>
+			<input type='hidden' name='profile_id' type='text' value={{this.id}}>
+			<br>
+			<button type='submit' class='btn btn-default'>
+			SUBMIT! </button>
+			</form>
+		</div>
+		{{/each}}
+		</div>
+	</div>
+	</div>
+	</div>
+
+	<div class='container'>
+		<div class='row'>
+			<div class='col-xs-12 text-center enter_section'>
+			<form action='/profile/create' method='POST'>
+				<input type='text' name='id' class='form-control'
+				value='1', id='id'>
+
+				<input type='text' name='fullname' class='form-control'
+				id='fullname'>
+				
+				<input type='text' name='title' class='form-control'
+				value='', id='title'>
+				
+				<input type='text' name='bio' class='form-control'
+				value='', id='bio'>
+				
+				<input type='text' name='interests' class='form-control'
+				value='', id='interests'>
+				
+				<input type='text' name='email' class='form-control'
+				value='', id='email'>
+				
+				<button type='submit' class='btn btn-primary' id='text-enter-button'> Submit </button>
+				</form>
+				<p> Enter your full name! </p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
